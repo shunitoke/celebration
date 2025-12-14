@@ -21,8 +21,8 @@ export function ThemeToggle({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex items-center rounded-full border border-white/10 bg-white/5 p-1 text-xs text-white shadow-sm backdrop-blur",
-        "dark:border-white/10 dark:bg-white/5",
+        "flex items-center rounded-full border border-black/10 bg-white/70 p-1 text-xs text-zinc-900 shadow-sm backdrop-blur",
+        "dark:border-white/10 dark:bg-white/5 dark:text-zinc-50",
         className,
       )}
       role="group"
@@ -33,7 +33,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         onClick={() => setTheme("light")}
         className={cn(
           "inline-flex items-center gap-1 rounded-full px-2 py-1 transition",
-          active === "light" && "bg-white/15",
+          active === "light" && "bg-black/5 dark:bg-white/15",
         )}
         aria-pressed={active === "light"}
       >
@@ -45,7 +45,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         onClick={() => setTheme("dark")}
         className={cn(
           "inline-flex items-center gap-1 rounded-full px-2 py-1 transition",
-          active === "dark" && "bg-white/15",
+          active === "dark" && "bg-black/5 dark:bg-white/15",
         )}
         aria-pressed={active === "dark"}
       >
@@ -57,7 +57,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         onClick={() => setTheme("system")}
         className={cn(
           "inline-flex items-center gap-1 rounded-full px-2 py-1 transition",
-          active === "system" && "bg-white/15",
+          active === "system" && "bg-black/5 dark:bg-white/15",
         )}
         aria-pressed={active === "system"}
       >
